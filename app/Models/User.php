@@ -17,7 +17,10 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-
+    public function tasks()
+    {
+        return $this->hasMany(Tasks::class, 'user_id');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
